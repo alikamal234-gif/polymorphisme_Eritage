@@ -1,34 +1,81 @@
 <?php
 
+/* ==================================================
+ * 1. INTRODUCTION À L’HÉRITAGE
+ * --------------------------------------------------
+ * L’héritage permet à une classe enfant
+ * d’hériter des propriétés et méthodes
+ * d’une classe parente.
+ * ==================================================
+ */
 
-// Classe parente
-class Animal {
-   
+// Classe parente (générale)
+class Animal
+{
+    // Propriété commune
+    protected $nom;
+
+    // Constructeur
+    public function __construct($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    // Méthode commune
+    public function parler()
+    {
+        echo "L’animal fait un son\n";
+    }
 }
 
-// Classe enfant 1
-class Chien extends Animal {
-}
 
-// Classe enfant 2
-class Chat extends Animal {
-    
-}
+/* ==================================================
+ * 2. LE MOT-CLÉ extends
+ * --------------------------------------------------
+ * Une classe enfant hérite de la classe parente
+ * grâce au mot-clé extends. Chien
+ * ==================================================
+ */
 
-// Polymorphisme simple ecriture
-$animal1 = new Chat();
-$animal1->parler();
 
-$animal2 = new Chien();
-$animal1->parler();
 
-// Polymorphisme bonne pratique ecreture
-function set(Animal $animal){
-    $animal->parler();
-}
 
-set(new chat);
-set(new chien);
 
-// final
+/* ==================================================
+ * 4. POLYMORPHISME
+ * --------------------------------------------------
+ * Même méthode, comportements différents
+ * function de affich
+ * ==================================================
+ */
+
+
+
+/* ==================================================
+ * 5. UTILISATION DU POLYMORPHISME
+ * ==================================================
+ */
+
+
+/* ==================================================
+ * 6. MOT-CLÉ parent::
+ * --------------------------------------------------
+ * Permet d’appeler une méthode ou un constructeur
+ * de la classe parente.
+ * ==================================================
+ */
+
+
+
+/* ==================================================
+ * 7. CLASSES ET MÉTHODES final
+ * --------------------------------------------------
+ * final empêche l’héritage ou la redéfinition.
+ * ==================================================
+ */
+
+
+
+
+
 
